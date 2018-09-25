@@ -1,0 +1,36 @@
+spring:
+  jpa:
+    show-sql: true
+  readWriteFlag: true
+  data-source:
+    url: jdbc:mysql://192.168.6.110:3306/operator?characterEncoding=utf8
+    username: root
+    password: root
+  read-data-source:
+    url: jdbc:mysql://192.168.6.110:3307/operator?characterEncoding=utf8
+    username: root
+    password: root
+  redis:
+    host: 192.168.6.110
+    port: 6379
+    database: 0
+    password:
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+
+#tomcat
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+  tomcat:
+    uri-encoding: UTF-8
+
+#日志
+logging:
+  level:
+    root: info
+  file: E:/logs/log.log
+
